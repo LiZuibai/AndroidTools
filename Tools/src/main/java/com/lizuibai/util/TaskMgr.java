@@ -1,4 +1,4 @@
-package com.lizuibai.androidtool;
+package com.lizuibai.util;
 
 import android.os.Handler;
 import android.os.Looper;

@@ -1,4 +1,6 @@
-package com.lizuibai.androidtool;
+package com.lizuibai.util;
+
+import android.text.TextUtils;
 
 public class M {
 
@@ -22,4 +24,10 @@ public class M {
         return def;
     }
 
+    public static boolean isInteger(String input) {
+        if (TextUtils.isEmpty(input)) {
+            return false;
+        }
+        return input.matches("[0-9]+");
+    }
 }
