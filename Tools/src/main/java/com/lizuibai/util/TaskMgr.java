@@ -29,7 +29,7 @@ public class TaskMgr {
     private TaskMgr() {
     }
 
-    public static void addTaskIntoPool(BaseTask runnable, int type) {
+    public static void addTaskIntoPool(Runnable runnable, int type) {
         if (runnable == null) {
             return;
         }
@@ -69,7 +69,7 @@ public class TaskMgr {
         }
     }
 
-    public static void addLigthTask(BaseTask task) {
+    public static void addLigthTask(Runnable task) {
         lightExecutor.execute(task);
     }
 
