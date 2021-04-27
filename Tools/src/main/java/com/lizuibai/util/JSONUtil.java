@@ -1,7 +1,5 @@
 package com.lizuibai.util;
 
-import android.support.annotation.NonNull;
-
 import org.json.JSONArray;
 
 import java.util.ArrayList;
@@ -15,7 +13,6 @@ public class JSONUtil {
         return String.valueOf(array.opt(0));
     }
 
-    @NonNull
     public static ArrayList<String> arrayToStringList(JSONArray array) {
         ArrayList<String> list = new ArrayList<>();
         if (array == null || array.length() <= 0) {

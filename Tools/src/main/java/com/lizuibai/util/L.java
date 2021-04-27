@@ -6,7 +6,7 @@ public class L {
 
     private static boolean isShowLog = U.isDebug;
     private static boolean writeFileLog = true;
-    private static String TAG = "CAR_";
+    private static String TAG = "LZB_";
 
     public static void v(String msg) {
         if (isShowLog) {

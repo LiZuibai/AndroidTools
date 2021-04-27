@@ -1,6 +1,5 @@
 package com.lizuibai.util;
 
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.widget.TextView;
 
@@ -38,7 +37,6 @@ public class StrUtil {
         return a.equals(b);
     }
 
-    @NonNull
     public static String getText(TextView tv) {
         if (tv == null) {
             return "";
@@ -106,5 +104,12 @@ public class StrUtil {
             e.printStackTrace();
         }
         return "";
+    }
+
+    public static String arrayToString(Object[] arr) {
+        if (arr == null) {
+            return "Array is null";
+        }
+        return "Size=" + arr.length + " " + TextUtils.join(", ", arr);
     }
 }

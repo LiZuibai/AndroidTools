@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
@@ -179,8 +178,7 @@ public class PermissionUtil {
 
     private static void shouldShowRationale(final Activity activity, final int requestCode, final String requestPermission) {
         //TODO
-        String[] permissionsHint = activity.getResources().getStringArray(R.array.permissions);
-        showMessageOKCancel(activity, "Rationale: " + permissionsHint[requestCode], new DialogInterface.OnClickListener() {
+        showMessageOKCancel(activity, "Rationale: " + requestPermission, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ActivityCompat.requestPermissions(activity,
@@ -207,8 +205,8 @@ public class PermissionUtil {
      * @param permissions
      * @param grantResults
      */
-    public static void requestPermissionsResult(final Activity activity, final int requestCode, @NonNull String[] permissions,
-                                                @NonNull int[] grantResults, PermissionGrant permissionGrant) {
+    public static void requestPermissionsResult(final Activity activity, final int requestCode, String[] permissions,
+                                                int[] grantResults, PermissionGrant permissionGrant) {
 
         if (activity == null) {
             return;
@@ -238,8 +236,7 @@ public class PermissionUtil {
             //TODO hint user this permission function
             L.i(TAG, "onRequestPermissionsResult PERMISSION NOT GRANTED");
             //TODO
-            String[] permissionsHint = activity.getResources().getStringArray(R.array.permissions);
-            openSettingActivity(activity, "Result" + permissionsHint[requestCode]);
+            openSettingActivity(activity, "Result" + StrUtil.arrayToString(permissions));
         }
 
     }

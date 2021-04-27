@@ -1,7 +1,6 @@
 package com.lizuibai.util;
 
 import android.graphics.Paint;
-import android.support.annotation.DimenRes;
 import android.text.TextPaint;
 
 public class DimenUtils {
@@ -28,7 +27,7 @@ public class DimenUtils {
         return (int) (U.CONTEXT.getResources().getDisplayMetrics().density * dp);
     }
 
-    public static int getDimen(@DimenRes int dimen) {
+    public static int getDimen(int dimen) {
         return U.CONTEXT.getResources().getDimensionPixelOffset(dimen);
     }
 
