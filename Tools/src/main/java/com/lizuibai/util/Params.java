@@ -22,4 +22,6 @@ public interface Params {
     String KEY_project = "project";
     String KEY_model = "model";
     String KEY_result = "result";
+    String KEY_list = "list";
+    String KEY_bean = "bean";
 }
